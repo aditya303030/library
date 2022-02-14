@@ -1,0 +1,192 @@
+body {
+  background-color: whitesmoke;
+  padding: 0;
+}
+
+.main {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Inconsolata', monospace;
+  padding-left: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.main1 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Inconsolata', monospace;
+  
+}
+
+.head {
+  box-shadow:
+  0px 3.5px 5.3px rgba(0, 0, 0, 0.048),
+  0px 11.6px 17.9px rgba(0, 0, 0, 0.072),
+  0px 52px 80px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.head > * {
+  flex: 1 1 50%;
+}
+
+.head-left {
+  width: 50%;
+  display: flex;
+}
+
+.head-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  box-shadow:
+  0px 2.9px 3.6px rgba(0, 0, 0, 0.045),
+  0px 7.9px 10px rgba(0, 0, 0, 0.065),
+  0px 19px 24.1px rgba(0, 0, 0, 0.085),
+  0px 63px 80px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+  margin-top:10rem;
+  margin-right: 30rem;
+  margin-left: 30rem;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-head {
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+}
+
+.input {
+  width: 22rem;
+  height: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  padding: 1rem;
+  margin:1rem ;
+}
+
+.signin-col {
+  display: flex;
+  align-items: center;  
+  flex-direction: column;
+}
+
+.button {
+  padding: 1rem;
+  border:none;
+  border-radius:10px;
+  margin: 1rem;
+  background-color:rgb(9, 109, 192);
+  font-size: 1.1rem;
+  width: 15rem;
+}
+
+.form_book.down_submit {
+  display: flex;
+  align-items: center;
+}
+
+.signup-head {
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+  text-decoration: none;
+}
+
+.signup-col {
+  display: flex;
+  align-items: center;  
+  flex-direction: column;
+}
+
+.signup-button:hover {
+  background-color:rgb(43, 71, 226) ;
+}
+
+.link{
+  margin: 0%;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  font-family: 'Inconsolata', monospace;
+}
+
+.link.user_first_name {
+  font-size: 1.1rem;
+}
+
+
+.book_register_col {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40rem;
+}
+
+.book_register_col > * {
+  flex: 1 1 50%;
+}
+
+.lib-left-sec {
+  box-shadow:
+  0px 3.5px 5.3px rgba(0, 0, 0, 0.048),
+  0px 11.6px 17.9px rgba(0, 0, 0, 0.072),
+  0px 52px 80px rgba(0, 0, 0, 0.12);
+  margin-top:2rem;
+  border-radius: 10px;
+  padding-bottom: 2rem;
+}
+
+.form_book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lib-sec {
+  display: flex;
+  justify-content: center;
+}
+
+.request_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details_books {
+  display: flex;
+  flex-direction: row;
+}
+
+.book_details_box {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap ;
+  box-shadow:
+  -2.2px -2.3px 12.4px rgba(0, 0, 0, 0.069),
+  12.6px 13.3px 41.8px rgba(0, 0, 0, 0.087),
+  107px 113px 187px rgba(0, 0, 0, 0.16);
+  padding: 0;
+  margin: 1rem;
+}
+
+.input.book_details_inp {
+  padding: 0%;
+  font-family: 'Arvo', serif;
+}

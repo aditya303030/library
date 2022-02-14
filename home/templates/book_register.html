@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library-Book Register</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="head">
+      <div class="head-left">
+        <a href="/" class="main library">LIBRARY</a>
+      </div>
+      <div class="head-right">
+        {% if request.user.is_authenticated%}
+          <a href="logout" class="link logout"><strong>Logout</strong></a>
+          <p class="link user_first_name">Hello, {{user.username}}</p>
+        {%else%}
+          <a href="sign-in" class="link sign_in"><strong>Sign-in</strong></a>
+          <a href="sign-up" class="link sign_up"><strong>Sign-up</strong></a>
+        {%endif%}
+      </div>
+    </div>
+    <div class="library-mang-sys">
+      <div class="lib-sec">
+        <form method="POST" action="book_register" class="book_register_col"> {%csrf_token%}
+          <h1 class="main book_register">Add a Book</h1>
+          <input type="text" placeholder="Enter your name" name="name_of_uploader" class="input uploader_name">
+          <input type="text" placeholder="Enter book name" name="book_name" class="input book_name">
+          <input type="text" placeholder="Enter author name" name="author" class="input author_name">
+          <input type="number" placeholder="Enter number of pages" name="number_of_pages" class="input number_of_pages">
+          <input type="text" placeholder="Enter brief description" name="brief_description" class="input description">
+          <h1 class="main book_register">Add ratings and reviews</h1>
+          <h2 class="main1 book_register">Enter ratings(out of 10)</h2>
+          <input type="number" placeholder="Enter rating" name="rating" class="input book_rating">
+          <h2 class="main1 book_register">Enter reviews</h2>
+          <input type="text" placeholder="Enter reviews" name="review" class="input book_review">
+          <input type="submit" value="Submit" class="button book_register">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

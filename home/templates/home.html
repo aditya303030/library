@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <title>Library-home</title>
+  </head>
+  <body>
+    <div class="head">
+      <div class="head-left">
+        <a href="/" class="main library">LIBRARY</a>
+      </div>
+      <div class="head-right">
+        {% if request.user.is_authenticated%}
+          <a href="book_register" class="link book_register"><strong>Register a Book</strong></a>
+          <a href="logout" class="link logout"><strong>Logout</strong></a>
+          <p class="link user_first_name">Hello, {{user.username}}</p>
+        {%else%}
+          <a href="sign-in" class="link sign_in"><strong>Sign-in</strong></a>
+          <a href="sign-up" class="link sign_up"><strong>Sign-up</strong></a>
+        {%endif%}
+      </div>
+    </div>
+    <!-- <div class="request_book_col">
+      <div class="box req_book_box">
+        <div class="request_col">
+          <h2 class="main request_head">Get data about a book</h2>
+          <form method="POST" action="" class="request_form"> {%csrf_token%}
+            <input type="text" placeholder="Enter Book Name" name="book_name" class="input req_book_name">
+            <input type="submit" value="Submit" class="button book_request">
+          </form>
+        </div>
+      </div>
+    </div> -->
+    <p class="input book_details_inp">Number of books registered: {{books_number}}</p>
+    <div class="details_books">
+      {%for book in book_requested %} 
+        <div class="book_details_box">
+          <p class="input book_details_inp">Name of Uplaoder: {{book.name_of_uploader}}</p>
+          <p class="input book_details_inp">Name of Book: {{book.book_name}}</p>
+          <p class="input book_details_inp">Name of author: {{book.author}}</p>
+          <p class="input book_details_inp">Number of pages: {{book.number_of_pages}}</p>
+          <p class="input book_details_inp">Book description: {{book.brief_description}}</p>
+          <p class="input book_details_inp">Book rating: {{book.rating}}</p>
+          <p class="input book_details_inp">Book review: {{book.review}}</p>
+        </div>
+      {%endfor%}
+    </div>
+  </body>
+</html>
