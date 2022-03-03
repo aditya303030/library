@@ -19,6 +19,7 @@
       </div>
       <div class="head-right">
         {% if request.user.is_authenticated%}
+          <a href="issue_book" class="link issue_book"><strong>Issue a book</strong></a>
           <a href="book_register" class="link book_register"><strong>Register a Book</strong></a>
           <a href="logout" class="link logout"><strong>Logout</strong></a>
           <p class="link user_first_name">Hello, {{user.username}}</p>
@@ -39,19 +40,21 @@
         </div>
       </div>
     </div> -->
-    <p class="input book_details_inp">Number of books registered: {{books_number}}</p>
-    <div class="details_books">
-      {%for book in book_requested %} 
-        <div class="book_details_box">
-          <p class="input book_details_inp">Name of Uplaoder: {{book.name_of_uploader}}</p>
-          <p class="input book_details_inp">Name of Book: {{book.book_name}}</p>
-          <p class="input book_details_inp">Name of author: {{book.author}}</p>
-          <p class="input book_details_inp">Number of pages: {{book.number_of_pages}}</p>
-          <p class="input book_details_inp">Book description: {{book.brief_description}}</p>
-          <p class="input book_details_inp">Book rating: {{book.rating}}</p>
-          <p class="input book_details_inp">Book review: {{book.review}}</p>
-        </div>
-      {%endfor%}
-    </div>
+    {%if user.is_authenticated%}
+      <p class="input book_details_inp">Number of books registered: {{books_number}}</p>
+      <div class="details_books">
+        {%for book in book_requested %} 
+          <div class="book_details_box">
+            <p class="input book_details_inp">Name of Uplaoder: {{book.name_of_uploader}}</p>
+            <p class="input book_details_inp">Name of Book: {{book.book_name}}</p>
+            <p class="input book_details_inp">Name of author: {{book.author}}</p>
+            <p class="input book_details_inp">Number of pages: {{book.number_of_pages}}</p>
+            <p class="input book_details_inp">Book description: {{book.brief_description}}</p>
+            <p class="input book_details_inp">Book rating: {{book.rating}}</p>
+            <p class="input book_details_inp">Book review: {{book.review}}</p>
+          </div>
+        {%endfor%}
+      </div>
+    {%endif%}
   </body>
 </html>

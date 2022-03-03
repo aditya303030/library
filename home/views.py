@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from .forms import *
-
+from django.views.generic.edit import CreateView
 # Create your views here.
 def home(request):
   book_requested = Book_register.objects.all()
@@ -21,3 +21,8 @@ def book_info(request):
     if book is not None:
       print('book exists')
   return render(request,'home.html',{})
+
+def issue_book(request):
+  book_requested = Book_register.objects.all()
+  return render(request, 'issue_book.html',{'book_requested':book_requested})
+

@@ -127,13 +127,23 @@ body {
 }
 
 
-.book_register_col {
+form.book_form.book_register_col {
   display: flex;
   justify-content: center;
   align-items:center;
   flex-direction: row;
   flex-wrap: wrap;
   width: 40rem;
+  margin: 0;
+}
+
+form.book_form.issue_book_col {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
 }
 
 .book_register_col > * {

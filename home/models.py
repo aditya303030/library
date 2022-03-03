@@ -12,3 +12,4 @@ class Book_register(models.Model):
   review = models.CharField(max_length=120)
   class Meta:
     db_table = "Registered_books"
+
