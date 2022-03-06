@@ -16,6 +16,7 @@ class Book_register(models.Model):
 
 class Book_issue(models.Model):
   book_issue = models.CharField(max_length=50, default=None)
-  date_issue = models.DateField()
+  date_issue = models.IntegerField()
+  name_of_person = models.CharField(max_length=50,default=None)
   class Meta:
     db_table = "Book_Issued"
