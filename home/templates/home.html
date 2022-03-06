@@ -29,17 +29,6 @@
         {%endif%}
       </div>
     </div>
-    <!-- <div class="request_book_col">
-      <div class="box req_book_box">
-        <div class="request_col">
-          <h2 class="main request_head">Get data about a book</h2>
-          <form method="POST" action="" class="request_form"> {%csrf_token%}
-            <input type="text" placeholder="Enter Book Name" name="book_name" class="input req_book_name">
-            <input type="submit" value="Submit" class="button book_request">
-          </form>
-        </div>
-      </div>
-    </div> -->
     {%if user.is_authenticated%}
       <p class="input book_details_inp">Number of books registered: {{books_number}}</p>
       <div class="details_books">

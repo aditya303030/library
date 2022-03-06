@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from django.db import models
 
 # Create your models here.
@@ -13,3 +14,8 @@ class Book_register(models.Model):
   class Meta:
     db_table = "Registered_books"
 
+class Book_issue(models.Model):
+  book_issue = models.CharField(max_length=50, default=None)
+  date_issue = models.DateField()
+  class Meta:
+    db_table = "Book_Issued"

@@ -1,3 +1,4 @@
+import re
 from django.shortcuts import redirect, render
 from .forms import *
 from django.views.generic.edit import CreateView
@@ -24,5 +25,10 @@ def book_info(request):
 
 def issue_book(request):
   book_requested = Book_register.objects.all()
-  return render(request, 'issue_book.html',{'book_requested':book_requested})
+  BookIssue = BookIssueForm(request.POST or None)
+  if BookIssue.is_valid():
+    BookIssue.save()
+    print('Book Issued')
+    return redirect('/')
+  return render(request, 'issue_book.html',context ={'book_requested':book_requested,"BookIssueForm":BookIssueForm})
 

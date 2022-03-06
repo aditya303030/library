@@ -27,7 +27,9 @@
       <div class="form-sec">
         <form method="POST" action="issue_book" class="book_form issue_book_col">{%csrf_token%}
           <h1 class="main book_register">Issue a Book</h1>
-          <input type="text" placeholder="Enter Book Name" name="book_name" class="input book_name">
+          <input type="text" placeholder="Enter Book Name" name="book_name" class="input book_issue">
+          <input type="text" placeholder="Number of days of issuing" name="issue_date" class="input issue_date">
+          <input type="submit" value="Submit" class="button">
         </form>
       </div>
     </div>
